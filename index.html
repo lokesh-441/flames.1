@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLAMES Relationship Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">🔥 FLAMES Calculator 🔥</h1>
+        
+        <div class="input-group">
+            <input type="text" id="name1" placeholder="Enter Your Name" required>
+            <input type="text" id="name2" placeholder="Enter Crush/Partner's Name" required>
+        </div>
+
+        <button id="calculate-btn">Ignite the FLAMES</button>
+
+        <div id="result-container">
+            <div id="flame-animation"></div>
+            <div id="result-text" class="hidden"></div>
+        </div>
+
+        <div class="history-container">
+            <h2>History of Checks (Stored Locally)</h2>
+            <ul id="history-list"></ul>
+            <button id="clear-history-btn" class="hidden">Clear History</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

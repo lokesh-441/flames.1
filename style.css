@@ -1,0 +1,142 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 69, 0, 0.5); /* Fiery glow effect */
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    color: #ff4500; /* Orange-red for fire theme */
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
+}
+
+.input-group input {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    margin-bottom: 15px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #ff8c00;
+    outline: none;
+}
+
+#calculate-btn {
+    background-color: #ff4500;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+#calculate-btn:hover {
+    background-color: #ff6347;
+    transform: translateY(-2px);
+}
+
+#result-container {
+    margin-top: 30px;
+    min-height: 100px; /* Space for animation */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FLAME ANIMATION STYLES */
+#flame-animation {
+    width: 50px;
+    height: 70px;
+    background: radial-gradient(circle at 50% 90%, #ff8c00 0%, #ff4500 50%, transparent 100%);
+    border-radius: 50% 50% 30% 30% / 60% 60% 40% 40%;
+    filter: blur(5px);
+    animation: pulse 1s infinite alternate, burn 0.5s infinite alternate;
+    transform-origin: 50% 100%;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes burn {
+    0% { background: radial-gradient(circle at 50% 90%, #ff8c00 0%, #ff4500 50%, transparent 100%); }
+    100% { background: radial-gradient(circle at 50% 90%, #ffd700 0%, #ff6347 50%, transparent 100%); }
+}
+
+/* Result Text */
+#result-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 0 0 10px #ff8c00;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* History Styles */
+.history-container {
+    margin-top: 40px;
+    text-align: left;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.history-container h2 {
+    color: #ff8c00;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+}
+
+#history-list li {
+    background-color: #2a2a2a;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-left: 5px solid #ff4500;
+    border-radius: 5px;
+}
+
+#clear-history-btn {
+    background-color: #8b0000;
+    margin-top: 10px;
+    font-size: 14px;
+}
