@@ -1,0 +1,12 @@
+{
+  "name": "FLAMES Game",
+  "short_name": "FLAMES",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ff6fd8",
+  "theme_color": "#3813c2",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
